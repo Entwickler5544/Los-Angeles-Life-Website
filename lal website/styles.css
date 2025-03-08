@@ -1,0 +1,132 @@
+/* Grundlegendes Styling */
+body {
+    font-family: 'Arial Black', sans-serif; /* Kräftige Schriftart */
+    background: #000; /* Tiefschwarzer Hintergrund */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1500px; /* Perspektive für 3D-Effekte */
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    transform: perspective(1500px) translateZ(0);
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 5px 20px;
+    transition: all 0.3s ease;
+    transform: perspective(1500px);
+    font-weight: 900;
+}
+
+/* 3D Hover Effekt für Navigation */
+nav ul li a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+    transform: scale(1.1);
+}
+
+/* 3D-Effekt für Sektionen */
+section {
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(255, 0, 0, 0.8);
+    padding: 20px;
+    margin: 30px;
+    max-width: 80%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekt für Sektionen */
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 1);
+}
+
+/* 3D-Text-Animation */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    color: white;
+    letter-spacing: 2px;
+    animation: textGlow 3s infinite alternate;
+}
+
+/* Glow-Effekt für Text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px red, 0 0 20px red;
+    }
+    100% {
+        text-shadow: 0 0 20px red, 0 0 30px red;
+    }
+}
+
+/* Detail-Box */
+.detail-box {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Detail-Box Hover-Effekt */
+.detail-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.8);
+}
+
+/* 3D-Buttons */
+button {
+    background: linear-gradient(45deg, red, darkred);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* 3D Hover-Effekt für Buttons */
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+}
